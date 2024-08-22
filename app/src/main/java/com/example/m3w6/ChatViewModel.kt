@@ -9,14 +9,8 @@ class ChatViewModel : ViewModel() {
     private val _messages = MutableLiveData<MutableList<Message>>(mutableListOf())
     val messages: LiveData<MutableList<Message>> = _messages
 
-    fun sendMessage(content: String) {
-        val message = Message(content, true)
-        _messages.value?.add(message)
-        receiveMessage("Echo: $content")
-    }
-
-    private fun receiveMessage(content: String) {
-        val message = Message(content, false)
+    fun sendMessage(content: String, isSentByUser: Boolean) {
+        val message = Message(content, isSentByUser)
         _messages.value?.add(message)
         _messages.value = _messages.value
     }
