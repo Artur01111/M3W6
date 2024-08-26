@@ -39,9 +39,12 @@ android {
         jvmTarget = "1.8"
     }
 }
+var nav_version = "2.7.7"
 
 dependencies {
 
+    implementation("androidx.navigation:navigation-fragment:$nav_version")
+    implementation("androidx.navigation:navigation-ui:$nav_version")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("androidx.fragment:fragment-ktx:1.6.1")

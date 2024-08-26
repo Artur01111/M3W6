@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/chooserFragment">
+
+    <fragment
+        android:id="@+id/chooserFragment"
+        android:name="com.example.m3w6.ChooserFragment"
+        android:label="fragment_chooser"
+        tools:layout="@layout/fragment_chooser" >
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            android:id="@+id/action_chooserFragment_to_costumisationFragment"
+            app:destination="@id/costumisationFragment" />
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            android:id="@+id/action_chooserFragment_to_callsFragment"
+            app:destination="@id/callsFragment" />
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            android:id="@+id/action_chooserFragment_to_contactsFragment2"
+            app:destination="@id/contactsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/costumisationFragment"
+        android:name="com.example.m3w6.CostumisationFragment"
+        android:label="fragment_costumisation"
+        tools:layout="@layout/fragment_costumisation" />
+    <fragment
+        android:id="@+id/callsFragment"
+        android:name="com.example.m3w6.CallsFragment"
+        android:label="fragment_calls"
+        tools:layout="@layout/fragment_calls" />
+    <fragment
+        android:id="@+id/contactsFragment2"
+        android:name="com.example.m3w6.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" >
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            android:id="@+id/action_contactsFragment2_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.m3w6.ChatFragment"
+        android:label="ChatFragment" />
+</navigation>

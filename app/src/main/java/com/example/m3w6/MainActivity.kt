@@ -12,8 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        supportFragmentManager.beginTransaction().add(R.id.container_view_contact, ContactsFragment()).addToBackStack(null).commit()
-
+        //supportFragmentManager.beginTransaction().add(R.id.navHost, ContactsFragment()).addToBackStack(null).commit()
     }
 }

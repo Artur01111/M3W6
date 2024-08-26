@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.m3w6.databinding.FragmentContactsBinding
 
 class ContactsFragment : Fragment() {
@@ -25,7 +26,7 @@ class ContactsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         loadData()
         adapter = ContactAdapter(contacts) {
-            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container_view_contact, ChatFragment()).addToBackStack(null).commit()
+            findNavController().navigate(R.id.action_contactsFragment2_to_chatFragment)
         }
         binding.rvContacts.adapter = adapter
     }

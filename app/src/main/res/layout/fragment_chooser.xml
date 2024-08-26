@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChooserFragment">
+
+    <Button
+        android:id="@+id/sts"
+        android:textStyle="bold"
+        android:text="Setings"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="60dp"/>
+
+    <Button
+        android:id="@+id/calls"
+        android:textStyle="bold"
+        android:text="Calls"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="60dp"/>
+    <Button
+        android:id="@+id/contacts"
+        android:textStyle="bold"
+        android:text="Contacts"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="110dp"
+        android:layout_height="60dp"/>
+
+</LinearLayout>
